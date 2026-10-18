@@ -7,7 +7,7 @@
  * for private use, or maps published under a compatible licence). Generated tiles are git-ignored by default.
  */
 import { existsSync, rmSync } from 'node:fs';
-import { relative, resolve } from 'node:path';
+import { dirname, relative, resolve } from 'node:path';
 import sharp from 'sharp';
 import { fail, GAMES_DIR, parseArgs, readManifest, writeManifest } from './lib';
 
@@ -46,6 +46,9 @@ await encoded
     background: { r: 0, g: 0, b: 0, alpha: 0 },
   })
   .toFile(outDir);
+for (const leftover of [resolve(dirname(outDir), 'vips-properties.xml'), resolve(outDir, 'vips-properties.xml')]) {
+  rmSync(leftover, { force: true });
+}
 
 const ext = format === 'jpeg' ? 'jpg' : format;
 if (map.width !== meta.width || map.height !== meta.height) {
