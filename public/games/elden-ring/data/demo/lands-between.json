@@ -1,0 +1,80 @@
+{
+  "format": "mappzy-locations@1",
+  "gameId": "elden-ring",
+  "mapId": "lands-between",
+  "meta": {
+    "title": "Dane demonstracyjne — Ziemie Pomiędzy",
+    "demo": true,
+    "source": "Nazwy z gry; pozycje są przybliżone i dopasowane do mapy zastępczej. Nie używać jako danych docelowych.",
+    "license": "CC0 (struktura przykładowa)"
+  },
+  "locations": [
+    { "id": "demo:lb:grace-first-step", "category": "grace", "name": "Pierwszy Krok (The First Step)", "region": "Limgrave", "x": 3480, "y": 6420, "description": "Pierwsze Miejsce Łaski po opuszczeniu Kaplicy Wyczekiwania.", "hints": "Obok stoi Varré w Białej Masce." },
+    { "id": "demo:lb:grace-church-elleh", "category": "grace", "name": "Kościół Elleh", "region": "Limgrave", "x": 3600, "y": 6300, "description": "Zrujnowany kościół z kowadłem i kupcem Kalé." },
+    { "id": "demo:lb:grace-gatefront", "category": "grace", "name": "Ruiny Gatefront", "region": "Limgrave", "x": 3460, "y": 5900, "description": "Ruiny przed bramą Zamku Stormveil.", "hints": "W piwnicy znajdziesz mapę Limgrave (Zachód) na pobliskim obelisku." },
+    { "id": "demo:lb:grace-stormhill-shack", "category": "grace", "name": "Chata na Stormhill", "region": "Stormhill", "x": 3320, "y": 5720 },
+    { "id": "demo:lb:grace-castle-morne", "category": "grace", "name": "Wał Zamku Morne", "region": "Półwysep Płaczu", "x": 4100, "y": 7520 },
+    { "id": "demo:lb:grace-lake-facing-cliffs", "category": "grace", "name": "Klify nad Jeziorem", "region": "Liurnia Jezior", "x": 2950, "y": 4900 },
+    { "id": "demo:lb:grace-academy-gate-town", "category": "grace", "name": "Miasto przy Bramie Akademii", "region": "Liurnia Jezior", "x": 2250, "y": 4250 },
+    { "id": "demo:lb:grace-caelid-highway", "category": "grace", "name": "Trakt Caelid (Południe)", "region": "Caelid", "x": 5150, "y": 6300 },
+    { "id": "demo:lb:grace-altus-plateau", "category": "grace", "name": "Płaskowyż Altus", "region": "Płaskowyż Altus", "x": 3150, "y": 3350 },
+    { "id": "demo:lb:grace-erdtree-sanctuary", "category": "grace", "name": "Sanktuarium Drzewa Erd", "region": "Leyndell", "x": 4300, "y": 2850 },
+    { "id": "demo:lb:grace-forbidden-lands", "category": "grace", "name": "Zakazane Ziemie", "region": "Szczyty Olbrzymów", "x": 4900, "y": 2450 },
+
+    { "id": "demo:lb:boss-tree-sentinel", "category": "boss", "name": "Wartownik Drzewa", "region": "Limgrave", "x": 3640, "y": 6200, "description": "Konny rycerz patrolujący drogę przy Kościele Elleh.", "hints": "Zalecany powrót z koniem Torrentem i ulepszoną bronią." },
+    { "id": "demo:lb:boss-margit", "category": "boss", "name": "Margit, Upadły Omen", "region": "Stormhill", "x": 3350, "y": 5600, "description": "Strażnik bramy Zamku Stormveil.", "hints": "Kotwiczne Kajdany Margita (od Patchesa/Kalé) unieruchamiają go na chwilę." },
+    { "id": "demo:lb:boss-godrick", "category": "boss", "name": "Godrick Szczepiony", "region": "Zamek Stormveil", "x": 3150, "y": 5420, "description": "Władca Pustki, pierwszy Pan Półbogów na drodze gracza." },
+    { "id": "demo:lb:boss-leonine", "category": "boss", "name": "Lwi Pomiot", "region": "Półwysep Płaczu", "x": 4120, "y": 7600 },
+    { "id": "demo:lb:boss-loretta", "category": "boss", "name": "Królewska Rycerka Loretta", "region": "Liurnia Jezior", "x": 1600, "y": 3900, "description": "Strażniczka Dworu Caria." },
+    { "id": "demo:lb:boss-red-wolf", "category": "boss", "name": "Czerwony Wilk Radagona", "region": "Akademia Raya Lucaria", "x": 2020, "y": 4020 },
+    { "id": "demo:lb:boss-rennala", "category": "boss", "name": "Rennala, Królowa Pełni", "region": "Akademia Raya Lucaria", "x": 1980, "y": 3960 },
+    { "id": "demo:lb:boss-radahn", "category": "boss", "name": "Starscourge Radahn", "region": "Caelid", "x": 6100, "y": 6750, "hints": "Festiwal walki rozpoczyna się po aktywacji w Zamku Redmane." },
+    { "id": "demo:lb:boss-oneil", "category": "boss", "name": "Dowódca O'Neil", "region": "Caelid", "x": 5850, "y": 6050 },
+    { "id": "demo:lb:boss-rykard", "category": "boss", "name": "Rykard, Pan Bluźnierstwa", "region": "Góra Gelmir", "x": 2350, "y": 2350 },
+    { "id": "demo:lb:boss-morgott", "category": "boss", "name": "Morgott, Król Omenów", "region": "Leyndell", "x": 4350, "y": 2800 },
+    { "id": "demo:lb:boss-fire-giant", "category": "boss", "name": "Ognisty Olbrzym", "region": "Szczyty Olbrzymów", "x": 5900, "y": 1750 },
+    { "id": "demo:lb:boss-malenia", "category": "boss", "name": "Malenia, Ostrze Miquelli", "region": "Haligtree Miquelli", "x": 3550, "y": 420, "hints": "Opcjonalny boss; dostęp przez ukryte przejście na Uświęconym Polu Śnieżnym." },
+    { "id": "demo:lb:boss-maliketh", "category": "boss", "name": "Maliketh, Czarne Ostrze", "region": "Rozpadająca się Farum Azula", "x": 7000, "y": 3700 },
+
+    { "id": "demo:lb:weapon-bloodhounds-fang", "category": "weapon", "name": "Kieł Ogara", "region": "Limgrave", "x": 3950, "y": 6000, "description": "Zakrzywiony wielki miecz z krwawieniem.", "hints": "Nagroda za pokonanie Rycerza Ogara Darrivila w Evergaolu." },
+    { "id": "demo:lb:weapon-uchigatana", "category": "weapon", "name": "Uchigatana", "region": "Stormhill", "x": 3280, "y": 5820, "hints": "Na zwłokach w Katakumbach Zmarłych (Deathtouched Catacombs)." },
+    { "id": "demo:lb:weapon-sword-night-flame", "category": "weapon", "name": "Miecz Nocy i Płomienia", "region": "Liurnia Jezior", "x": 1700, "y": 3820, "hints": "W skrzyni Dworu Caria; wymaga 24 INT i 24 WIA." },
+    { "id": "demo:lb:weapon-moonveil", "category": "weapon", "name": "Moonveil", "region": "Caelid", "x": 4850, "y": 5850, "hints": "Upuszczany przez Wyrma Magmowego w Tunelu Gael." },
+    { "id": "demo:lb:weapon-rivers-of-blood", "category": "weapon", "name": "Rzeki Krwi", "region": "Szczyty Olbrzymów", "x": 5300, "y": 2350, "hints": "Upuszczana przez najeźdźcę Okinę przy Kościele Odpoczynku." },
+
+    { "id": "demo:lb:talisman-erdtrees-favor", "category": "talisman", "name": "Łaska Drzewa Erd", "region": "Limgrave", "x": 3000, "y": 6550, "hints": "Grób Bohatera Fringefolk — wymaga dwóch Kluczy Kamiennego Miecza." },
+    { "id": "demo:lb:talisman-green-turtle", "category": "talisman", "name": "Talizman Zielonego Żółwia", "region": "Limgrave", "x": 4250, "y": 6750, "hints": "Wioska Summonwater, w zrujnowanym budynku." },
+    { "id": "demo:lb:talisman-radagons-soreseal", "category": "talisman", "name": "Pieczęć Bólu Radagona", "region": "Dragonbarrow", "x": 5950, "y": 4900, "hints": "Fort Faroth, na krokwiach nad dachem." },
+    { "id": "demo:lb:talisman-godfrey-icon", "category": "talisman", "name": "Ikona Godfreya", "region": "Płaskowyż Altus", "x": 3600, "y": 3400 },
+
+    { "id": "demo:lb:sorcery-rock-sling", "category": "sorcery", "name": "Kamienna Proca", "region": "Caelid", "x": 5350, "y": 5750, "hints": "Ruiny Ulicy Mędrców, w piwnicy." },
+    { "id": "demo:lb:sorcery-comet-azur", "category": "sorcery", "name": "Kometa Azur", "region": "Góra Gelmir", "x": 2600, "y": 2750, "hints": "Od Pierwotnego Czarownika Azura w Wiosce Pustelników." },
+    { "id": "demo:lb:incantation-flame-sling", "category": "incantation", "name": "Ognista Proca", "region": "Limgrave", "x": 3700, "y": 6150, "hints": "Kupowana od Brata Corhyna przy Okrągłym Stole." },
+    { "id": "demo:lb:incantation-lightning-spear", "category": "incantation", "name": "Włócznia Błyskawicy", "region": "Płaskowyż Altus", "x": 3450, "y": 3150 },
+
+    { "id": "demo:lb:ash-lions-claw", "category": "ash-of-war", "name": "Popiół Wojny: Lwi Pazur", "region": "Limgrave", "x": 4400, "y": 6350, "hints": "Fort Haight, w skrzyni na szczycie wieży." },
+    { "id": "demo:lb:spirit-lone-wolf", "category": "spirit-ash", "name": "Popioły Samotnego Wilka", "region": "Limgrave", "x": 3640, "y": 6280, "hints": "Od Renny przy Kościele Elleh nocą, po otrzymaniu Torrenta." },
+    { "id": "demo:lb:spirit-black-knife-tiche", "category": "spirit-ash", "name": "Popioły Czarnego Noża Tiche", "region": "Liurnia Jezior", "x": 1800, "y": 4700, "hints": "Evergaol Przywódczyni — Alecto." },
+
+    { "id": "demo:lb:dungeon-murkwater-cave", "category": "dungeon", "name": "Jaskinia Mętnej Wody", "region": "Limgrave", "x": 3900, "y": 5750 },
+    { "id": "demo:lb:dungeon-stormfoot", "category": "dungeon", "name": "Katakumby Stormfoot", "region": "Stormhill", "x": 3550, "y": 6000 },
+    { "id": "demo:lb:dungeon-limgrave-tunnels", "category": "dungeon", "name": "Tunele Limgrave", "region": "Limgrave", "x": 3700, "y": 5650 },
+    { "id": "demo:lb:dungeon-gael-tunnel", "category": "dungeon", "name": "Tunel Gael", "region": "Caelid", "x": 4850, "y": 5880 },
+    { "id": "demo:lb:dungeon-sellia-crystal-tunnel", "category": "dungeon", "name": "Kryształowy Tunel Sellia", "region": "Caelid", "x": 5650, "y": 5500 },
+
+    { "id": "demo:lb:key-dectus-left", "category": "key-item", "name": "Medalion Dectus (lewy)", "region": "Limgrave", "x": 4420, "y": 6330, "hints": "Fort Haight." },
+    { "id": "demo:lb:key-dectus-right", "category": "key-item", "name": "Medalion Dectus (prawy)", "region": "Dragonbarrow", "x": 5960, "y": 4930, "hints": "Fort Faroth." },
+    { "id": "demo:lb:key-academy-glintstone", "category": "key-item", "name": "Kryształowy Klucz Akademii", "region": "Liurnia Jezior", "x": 1450, "y": 4500, "hints": "Strzeżony przez smoczycę Smarag." },
+    { "id": "demo:lb:key-rold-medallion", "category": "key-item", "name": "Medalion Rolda", "region": "Leyndell", "x": 4380, "y": 2780 },
+
+    { "id": "demo:lb:npc-varre", "category": "npc", "name": "Varré w Białej Masce", "region": "Limgrave", "x": 3500, "y": 6440 },
+    { "id": "demo:lb:npc-kale", "category": "npc", "name": "Kupiec Kalé", "region": "Limgrave", "x": 3610, "y": 6320 },
+    { "id": "demo:lb:npc-sellen", "category": "npc", "name": "Czarodziejka Sellen", "region": "Limgrave", "x": 4250, "y": 6150, "hints": "W piwnicy Ruin Waypoint." },
+    { "id": "demo:lb:npc-blaidd", "category": "npc", "name": "Blaidd Półwilk", "region": "Limgrave", "x": 4250, "y": 6450, "hints": "Usłysz wycie w Mistwood." },
+    { "id": "demo:lb:npc-ranni", "category": "npc", "name": "Ranni Wiedźma", "region": "Liurnia Jezior", "x": 1500, "y": 3650, "hints": "Wzniesienie Ranni, za Dworem Caria." },
+
+    { "id": "demo:lb:material-golden-seed-1", "category": "material", "name": "Złote Ziarno", "region": "Limgrave", "x": 3820, "y": 6380, "hints": "Złote drzewko przy drodze." },
+    { "id": "demo:lb:material-smithing-stone-1", "category": "material", "name": "Kamień Kowalski [1]", "region": "Limgrave", "x": 3730, "y": 5680 },
+    { "id": "demo:lb:other-map-fragment-limgrave-w", "category": "other", "name": "Fragment Mapy: Limgrave (Zachód)", "region": "Limgrave", "x": 3430, "y": 6150 }
+  ]
+}

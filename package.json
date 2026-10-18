@@ -1,0 +1,44 @@
+{
+  "name": "mappzy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interaktywne mapy znajdziek z gier (start: Elden Ring)",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n web,api -c yellow,cyan \"vite\" \"npm:dev:server\"",
+    "dev:web": "vite",
+    "dev:server": "tsx watch server/index.ts",
+    "build": "tsc -b && vite build",
+    "start": "NODE_ENV=production tsx server/index.ts",
+    "typecheck": "tsc -b",
+    "test": "vitest run",
+    "tiles": "tsx scripts/make-tiles.ts",
+    "convert": "tsx scripts/convert-locations.ts",
+    "validate": "tsx scripts/validate-data.ts"
+  },
+  "dependencies": {
+    "@fontsource/cinzel": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "express": "^4.21.2",
+    "leaflet": "^1.9.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsx": "^4.20.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.25",
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^22.19.1",
+    "@types/react": "^18.3.27",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "concurrently": "^10.0.6",
+    "sharp": "^0.35.5",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  }
+}

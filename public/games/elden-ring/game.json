@@ -1,0 +1,79 @@
+{
+  "id": "elden-ring",
+  "name": "Elden Ring",
+  "shortName": "ER",
+  "description": "Mapa znajdziek Ziem Pomiędzy.",
+  "legal": "ELDEN RING™ & © BANDAI NAMCO Entertainment Inc. / FromSoftware, Inc. Projekt fanowski, niezwiązany z wydawcą. Oryginalne grafiki mapy nie są dołączone do repozytorium — obraz mapy importujesz samodzielnie (np. ze zrzutów ekranu z własnej kopii gry) wyłącznie do użytku zgodnego z prawem i licencją gry. Dane lokalizacji pochodzące z zewnętrznych źródeł muszą mieć licencję pozwalającą na ich wykorzystanie (pole meta.license w pliku danych).",
+  "theme": { "accent": "#d4b26a" },
+  "categories": [
+    { "id": "grace", "name": "Miejsca Łaski", "group": "Świat", "color": "#f3d27a", "shape": "star" },
+    { "id": "boss", "name": "Bossowie", "group": "Świat", "color": "#d9534f", "shape": "diamond" },
+    { "id": "dungeon", "name": "Lochy i katakumby", "group": "Świat", "color": "#c07a45", "shape": "hex" },
+    { "id": "npc", "name": "Postacie i kupcy", "group": "Świat", "color": "#d6a2c8", "shape": "circle" },
+    { "id": "weapon", "name": "Bronie", "group": "Przedmioty", "color": "#a9c0d6", "shape": "square" },
+    { "id": "armor", "name": "Pancerze", "group": "Przedmioty", "color": "#9c8a74", "shape": "square" },
+    { "id": "talisman", "name": "Talizmany", "group": "Przedmioty", "color": "#6fcf97", "shape": "circle" },
+    { "id": "sorcery", "name": "Czary", "group": "Magia", "color": "#6aa8ff", "shape": "triangle" },
+    { "id": "incantation", "name": "Inkantacje", "group": "Magia", "color": "#f2b84b", "shape": "triangle" },
+    { "id": "ash-of-war", "name": "Popioły wojny", "group": "Magia", "color": "#b48ce0", "shape": "hex" },
+    { "id": "spirit-ash", "name": "Popioły duchów", "group": "Magia", "color": "#8fd8ec", "shape": "circle" },
+    { "id": "key-item", "name": "Przedmioty kluczowe", "group": "Przedmioty", "color": "#efe6c8", "shape": "star" },
+    { "id": "material", "name": "Materiały i ulepszenia", "group": "Przedmioty", "color": "#93b56a", "shape": "circle" },
+    { "id": "other", "name": "Inne sekrety", "group": "Świat", "color": "#bfbfbf", "shape": "circle" }
+  ],
+  "maps": [
+    {
+      "id": "lands-between",
+      "name": "Ziemie Pomiędzy",
+      "width": 8192,
+      "height": 8192,
+      "locations": [],
+      "demoLocations": ["data/demo/lands-between.json"],
+      "labels": [
+        { "name": "Limgrave", "x": 3650, "y": 6150, "level": 1 },
+        { "name": "Półwysep Płaczu", "x": 3850, "y": 7250, "level": 1 },
+        { "name": "Liurnia Jezior", "x": 2300, "y": 4400, "level": 1 },
+        { "name": "Caelid", "x": 5500, "y": 6100, "level": 1 },
+        { "name": "Dragonbarrow", "x": 5700, "y": 5100, "level": 2 },
+        { "name": "Płaskowyż Altus", "x": 3300, "y": 3050, "level": 1 },
+        { "name": "Góra Gelmir", "x": 2400, "y": 2500, "level": 2 },
+        { "name": "Leyndell", "x": 4250, "y": 3050, "level": 1 },
+        { "name": "Szczyty Olbrzymów", "x": 5600, "y": 1950, "level": 1 },
+        { "name": "Uświęcone Pole Śnieżne", "x": 4500, "y": 1250, "level": 2 },
+        { "name": "Haligtree Miquelli", "x": 3600, "y": 500, "level": 2 },
+        { "name": "Rozpadająca się Farum Azula", "x": 7000, "y": 3800, "level": 2 }
+      ]
+    },
+    {
+      "id": "underground",
+      "name": "Podziemia",
+      "width": 6144,
+      "height": 6144,
+      "locations": [],
+      "demoLocations": ["data/demo/underground.json"],
+      "labels": [
+        { "name": "Rzeka Siofra", "x": 3600, "y": 4700, "level": 1 },
+        { "name": "Rzeka Ainsel", "x": 1900, "y": 3200, "level": 1 },
+        { "name": "Nokron, Wieczne Miasto", "x": 3900, "y": 3900, "level": 2 },
+        { "name": "Jezioro Zgnilizny", "x": 1600, "y": 4200, "level": 2 },
+        { "name": "Głębiny Korzeni", "x": 3000, "y": 2100, "level": 1 },
+        { "name": "Pałac Mohgwyn", "x": 5000, "y": 1200, "level": 2 }
+      ]
+    },
+    {
+      "id": "realm-of-shadow",
+      "name": "Królestwo Cienia",
+      "width": 6144,
+      "height": 6144,
+      "locations": [],
+      "demoLocations": ["data/demo/realm-of-shadow.json"],
+      "labels": [
+        { "name": "Równina Grobowiska", "x": 2900, "y": 4700, "level": 1 },
+        { "name": "Scadu Altus", "x": 2900, "y": 3000, "level": 1 },
+        { "name": "Twierdza Cienia", "x": 3000, "y": 2300, "level": 2 },
+        { "name": "Kraina Zbezczeszczonych", "x": 4500, "y": 1300, "level": 2 },
+        { "name": "Szczyty Jagged", "x": 4800, "y": 4400, "level": 2 }
+      ]
+    }
+  ]
+}
