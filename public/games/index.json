@@ -1,0 +1,10 @@
+{
+  "games": [
+    {
+      "id": "elden-ring",
+      "name": "Elden Ring",
+      "manifest": "elden-ring/game.json",
+      "description": "Ziemie Pomiędzy, Podziemia i Królestwo Cienia"
+    }
+  ]
+}
