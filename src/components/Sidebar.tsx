@@ -3,7 +3,6 @@ import type { CategoryDef, GameIndexEntry, GameLocation, GameManifest, ProgressM
 import { percent, type ProgressStats } from '../progress/progress';
 import { searchLocations, type SearchIndexEntry } from '../search';
 import { CategoryIcon } from './CategoryIcon';
-import type { SyncStatus } from '../hooks/useProgress';
 
 export type FoundFilter = 'all' | 'missing' | 'found';
 
@@ -19,9 +18,7 @@ interface Props {
   searchIndex: SearchIndexEntry[];
   progress: ProgressMap;
   usingDemo: boolean;
-  userName: string | null;
-  syncStatus: SyncStatus;
-  accountsAvailable: boolean;
+  storageOk: boolean;
   editMode: boolean;
   onGameChange: (id: string) => void;
   onMapChange: (id: string) => void;
@@ -29,19 +26,11 @@ interface Props {
   onSetCategories: (ids: string[], visible: boolean) => void;
   onFoundFilter: (f: FoundFilter) => void;
   onPick: (loc: GameLocation) => void;
-  onOpenAccount: () => void;
   onOpenData: () => void;
   onOpenAbout: () => void;
   onToggleEdit: () => void;
   onClose?: () => void;
 }
-
-const SYNC_LABEL: Record<SyncStatus, string> = {
-  local: 'Zapis lokalny',
-  syncing: 'Synchronizacja…',
-  synced: 'Zsynchronizowano',
-  error: 'Błąd synchronizacji',
-};
 
 export function Sidebar(props: Props) {
   const { manifest, mapId, categories, mapStats, gameStats, hidden, foundFilter } = props;
@@ -113,6 +102,11 @@ export function Sidebar(props: Props) {
           Postęp — {mapNames[mapId]}
         </h3>
         <ProgressBar found={mapStats.found} total={mapStats.total} large />
+        {!props.storageOk && (
+          <p className="error small" role="alert">
+            Przeglądarka blokuje zapis (tryb prywatny?) — postęp zniknie po zamknięciu karty.
+          </p>
+        )}
         <p className="muted small">
           Cała gra: {gameStats.found}/{gameStats.total} ({percent(gameStats.found, gameStats.total)}%)
         </p>
@@ -183,12 +177,8 @@ export function Sidebar(props: Props) {
       </section>
 
       <footer className="sidebar__footer">
-        <button type="button" className="btn btn--ghost" onClick={props.onOpenAccount} title={props.accountsAvailable ? undefined : 'Serwer kont niedostępny — postęp zapisywany lokalnie'}>
-          <span aria-hidden="true">◉</span> {props.userName ?? 'Konto'}
-          <span className={`sync-dot sync-dot--${props.syncStatus}`} title={SYNC_LABEL[props.syncStatus]} aria-label={SYNC_LABEL[props.syncStatus]} />
-        </button>
         <button type="button" className="btn btn--ghost" onClick={props.onOpenData}>
-          Dane
+          Dane i kopia postępu
         </button>
         <button type="button" className={`btn btn--ghost${props.editMode ? ' btn--on' : ''}`} aria-pressed={props.editMode} onClick={props.onToggleEdit}>
           Edytor

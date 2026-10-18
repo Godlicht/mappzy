@@ -3,8 +3,9 @@
  *
  *   npm run tiles -- --game elden-ring --map lands-between --input ./my-map.png [--format webp] [--quality 85]
  *
- * Only use images you are legally allowed to use (e.g. screenshots of your own copy of the game
- * for private use, or maps published under a compatible licence). Generated tiles are git-ignored by default.
+ * Tiles end up in `public/` and are published with the site, so only use images you are allowed to
+ * redistribute (your own artwork, or maps released under a compatible licence). For private use of
+ * game screenshots, import the image in the browser instead ("Dane" → "Obraz mapy"); it never leaves the device.
  */
 import { existsSync, rmSync } from 'node:fs';
 import { dirname, relative, resolve } from 'node:path';

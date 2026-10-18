@@ -1,6 +1,4 @@
 node_modules
 dist
-data/*.db*
 .env
 *.log
-public/games/*/maps/*/tiles/

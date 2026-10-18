@@ -15,5 +15,5 @@
     "noEmit": true,
     "types": ["node"]
   },
-  "include": ["server", "scripts", "tests", "vite.config.ts", "src/types.ts", "src/search.ts", "src/data/importers.ts", "src/progress/progress.ts"]
+  "include": ["scripts", "tests", "vite.config.ts", "src/types.ts", "src/search.ts", "src/data/importers.ts", "src/progress/progress.ts"]
 }

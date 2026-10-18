@@ -18,7 +18,7 @@ interface Props {
   onToggleDataset: (id: string, enabled: boolean) => void;
   onDeleteDataset: (id: string) => void;
   onSetMapImage: (mapId: string, file: File | null) => void;
-  onImportProgress: (data: ProgressMap, replace: boolean) => void;
+  onImportProgress: (data: ProgressMap) => void;
   onResetProgress: () => void;
 }
 
@@ -216,7 +216,7 @@ export function DataDialog(props: Props) {
           </ul>
 
           <h3>Kopia postępów</h3>
-          <p className="muted small">Postęp jest zapisywany automatycznie. Kopię możesz przenieść ręcznie między przeglądarkami.</p>
+          <p className="muted small">Postęp zapisuje się automatycznie w tej przeglądarce (bez konta i serwera). Aby kontynuować na innym urządzeniu, wyeksportuj plik i zaimportuj go tam — wpisy są łączone według daty zmiany, więc nic nie zostanie nadpisane starszym stanem.</p>
           <div className="details__actions">
             <button type="button" className="btn btn--ghost" onClick={() => download(`${manifest.id}-progress.json`, { gameId: manifest.id, progress: props.progress })}>
               Eksportuj postęp
@@ -235,7 +235,7 @@ export function DataDialog(props: Props) {
                     const progress = data?.progress ?? data;
                     if (!isValidProgressMap(progress)) throw new Error('Nieprawidłowy plik postępu.');
                     if (data.gameId && data.gameId !== manifest.id) throw new Error(`Plik dotyczy innej gry (${data.gameId}).`);
-                    props.onImportProgress(progress, false);
+                    props.onImportProgress(progress);
                     setMessage('Postęp zaimportowany i połączony z bieżącym.');
                   } catch (err) {
                     setMessage((err as Error).message);

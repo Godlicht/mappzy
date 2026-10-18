@@ -13,12 +13,10 @@ import {
 } from './data/localStore';
 import { computeStats } from './progress/progress';
 import { buildSearchIndex } from './search';
-import { useAuth } from './hooks/useAuth';
 import { useProgress } from './hooks/useProgress';
 import { MapView, type FocusRequest } from './map/MapView';
 import { Sidebar, type FoundFilter } from './components/Sidebar';
 import { DetailsPanel } from './components/DetailsPanel';
-import { AccountDialog } from './components/AccountDialog';
 import { DataDialog } from './components/DataDialog';
 import { Dialog } from './components/Dialog';
 
@@ -59,7 +57,6 @@ const stressCount = Math.min(100_000, Number(new URLSearchParams(window.location
 type Placing = 'new' | 'move' | null;
 
 export function App() {
-  const auth = useAuth();
   const initial = useMemo(parseHash, []);
   const [index, setIndex] = useState<GameIndex | null>(null);
   const [gameId, setGameId] = useState<string | null>(null);
@@ -72,13 +69,13 @@ export function App() {
   const [hidden, setHidden] = useState<Set<string>>(new Set());
   const [foundFilter, setFoundFilter] = useState<FoundFilter>('all');
   const [fatal, setFatal] = useState<string | null>(null);
-  const [dialog, setDialog] = useState<'account' | 'data' | 'about' | null>(null);
+  const [dialog, setDialog] = useState<'data' | 'about' | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [editMode, setEditMode] = useState(false);
   const [placing, setPlacing] = useState<Placing>(null);
   const [draftLoc, setDraftLoc] = useState<GameLocation | null>(null);
 
-  const { progress, status, toggle, setManyFound, importProgress, syncNow } = useProgress(game?.manifest.id ?? null, auth.user);
+  const { progress, storageOk, toggle, setManyFound, importProgress } = useProgress(game?.manifest.id ?? null);
 
   useEffect(() => {
     fetchGameIndex()
@@ -310,9 +307,7 @@ export function App() {
         searchIndex={searchIndex}
         progress={progress}
         usingDemo={usingDemo}
-        userName={auth.user?.username ?? null}
-        syncStatus={status}
-        accountsAvailable={auth.serverAvailable}
+        storageOk={storageOk}
         editMode={editMode}
         onGameChange={(id) => {
           selectLocation(null);
@@ -340,7 +335,6 @@ export function App() {
         }
         onFoundFilter={setFoundFilter}
         onPick={pick}
-        onOpenAccount={() => setDialog('account')}
         onOpenData={() => setDialog('data')}
         onOpenAbout={() => setDialog('about')}
         onToggleEdit={() => {
@@ -406,7 +400,6 @@ export function App() {
         )}
       </main>
 
-      <AccountDialog open={dialog === 'account'} onClose={() => setDialog(null)} auth={auth} syncStatus={status} onSyncNow={() => void syncNow()} />
       <DataDialog
         open={dialog === 'data'}
         onClose={() => setDialog(null)}
@@ -438,13 +431,13 @@ export function App() {
             return next;
           });
         }}
-        onImportProgress={(p: ProgressMap, replace) => importProgress(p, replace)}
+        onImportProgress={(p: ProgressMap) => importProgress(p)}
         onResetProgress={() => setManyFound(Object.keys(progress), false)}
       />
       <Dialog open={dialog === 'about'} title="O projekcie i prawach" onClose={() => setDialog(null)}>
         <div className="stack">
           <p>
-            <strong>mappzy</strong> to fanowska, interaktywna mapa znajdziek. Postęp zapisuje się w przeglądarce, a po zalogowaniu — również na koncie.
+            <strong>mappzy</strong> to fanowska, interaktywna mapa znajdziek. Działa w całości w przeglądarce, bez serwera i bazy danych: postęp zapisuje się lokalnie, a na inne urządzenie przeniesiesz go eksportem/importem pliku (zakładka „Dane”).
           </p>
           {manifest.legal && <p className="small">{manifest.legal}</p>}
           <p className="small muted">

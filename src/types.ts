@@ -1,5 +1,5 @@
 /**
- * Data model shared by the web app, the sync server and the CLI scripts.
+ * Data model shared by the web app and the CLI scripts.
  *
  * Coordinates of every location are expressed in pixels of the map's full-resolution
  * source image: x grows to the right, y grows downwards, (0,0) is the top-left corner.
